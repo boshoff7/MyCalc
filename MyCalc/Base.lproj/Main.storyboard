@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wJp-Gt-CBM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zCp-Fg-dzZ">
+            <objects>
+                <viewController id="wJp-Gt-CBM" customClass="ViewController" customModule="MyCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzh-um-pVM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="871-aV-eMW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cgx-Hz-jg6">
+                                        <rect key="frame" x="45" y="0.0" width="324" height="135.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                        <color key="textColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="knY-cX-QN5">
+                                        <rect key="frame" x="0.0" y="136.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSt-gL-mFA">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="kcO-uJ-C5q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-9g-KcX">
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="0.011214640919999999" green="0.026568138969999999" blue="0.37763822079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="delete.left" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backspacePressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="JdP-dm-Dle"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AML-Th-LSq">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="Fil-Uj-sru"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCu-UC-SxZ">
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="UJf-hk-pCB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hQZ-Cq-mab">
+                                        <rect key="frame" x="0.0" y="273" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zE-hw-TDN">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="WE5-lY-a2i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc5-VB-7eT">
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="MaD-Ub-LZx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMK-fa-Ngx">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="sqn-8Z-Te8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-0E-YWf">
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="nlM-Sp-VCz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="brn-Gw-eTH">
+                                        <rect key="frame" x="0.0" y="409.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA4-2J-WmT">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="isE-V7-t1g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z4-XI-WeK">
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="0qk-Ne-hRv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-Xd-697">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="cX2-aH-Yp9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-UI-FXD">
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="udR-UX-KQL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSE-0H-uWy">
+                                        <rect key="frame" x="0.0" y="546" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pY-eb-gjk">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="72z-Fb-SzE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-va-FUU">
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="fGy-cC-eor"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABU-2A-9Ma">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="792-vU-ffm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-ZJ-dgm">
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="Q20-Lb-mfy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VMt-XY-NDf">
+                                        <rect key="frame" x="0.0" y="682.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ5-K5-TSL">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="mAC-YE-lOJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG1-ok-gpv">
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="e3A-of-MKX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-x4-4Cm">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="135.5"/>
+                                                <color key="backgroundColor" red="0.56586855650000001" green="0.87847214939999996" blue="0.93511527780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="iRa-n1-9K6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2z-LP-Zyh">
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.31713616849999998" green="0.69534140830000002" blue="0.83139282459999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="wJp-Gt-CBM" eventType="touchUpInside" id="TnZ-6Z-Axn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VMt-XY-NDf" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" id="3Zm-1a-r4i"/>
+                                    <constraint firstItem="WSE-0H-uWy" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" id="Opl-UX-CgF"/>
+                                    <constraint firstItem="brn-Gw-eTH" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" id="TZl-Gv-Clh"/>
+                                    <constraint firstItem="hQZ-Cq-mab" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" id="TzE-6y-Tk8"/>
+                                    <constraint firstItem="cgx-Hz-jg6" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" constant="-90" id="Uc3-59-Nat"/>
+                                    <constraint firstItem="knY-cX-QN5" firstAttribute="width" secondItem="871-aV-eMW" secondAttribute="width" id="tlQ-qP-Msc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XBn-0P-w1I"/>
+                        <color key="backgroundColor" red="0.01056855824" green="0.0144267641" blue="0.36968016619999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="871-aV-eMW" firstAttribute="top" secondItem="XBn-0P-w1I" secondAttribute="top" id="M7B-mT-VyY"/>
+                            <constraint firstItem="XBn-0P-w1I" firstAttribute="bottom" secondItem="871-aV-eMW" secondAttribute="bottom" id="SEG-3e-AQr"/>
+                            <constraint firstItem="871-aV-eMW" firstAttribute="leading" secondItem="Bzh-um-pVM" secondAttribute="leading" id="aBy-Vk-XM3"/>
+                            <constraint firstItem="XBn-0P-w1I" firstAttribute="trailing" secondItem="871-aV-eMW" secondAttribute="trailing" id="iEF-en-eA8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nDO-3l-hx4"/>
+                    <connections>
+                        <outlet property="numberDisplayLabel" destination="cgx-Hz-jg6" id="7nW-J4-Av0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ly4-iW-a2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26548" y="1323"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.left" catalog="system" width="128" height="104"/>
+    </resources>
+</document>
